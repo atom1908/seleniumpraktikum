@@ -17,7 +17,7 @@ public abstract class BaseUITest {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         WebDriverManager.firefoxdriver().setup();
-        webDriver = new FirefoxDriver();
+        webDriver = new ChromeDriver();
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webDriver.get("https://qa-scooter.praktikum-services.ru/");
     }
