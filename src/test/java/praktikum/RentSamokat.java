@@ -1,5 +1,6 @@
 package praktikum;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -53,7 +54,8 @@ public class RentSamokat extends BaseUITest{
         rentalInformationPage.setInputComment("комментарий");
         rentalInformationPage.clickOrderButton();
         rentalInformationPage.clickYesButton();
-        rentalInformationPage.checkOrderSuccess();
+        boolean isDisplayed = rentalInformationPage.checkOrderSuccess();
+        Assert.assertTrue("Не отображается форма Заказ оформлен", isDisplayed);
     }
 
 
