@@ -44,7 +44,7 @@ public class RentalInformationPage extends BasePage{
         webDriver.findElement(yesButton).click();
     }
 
-    public void checkOrderSuccess() {
-        webDriver.findElement(orderSuccess).isDisplayed();
+    public boolean checkOrderSuccess() {
+        return webDriver.findElement(orderSuccess).isDisplayed();
     }
 }
